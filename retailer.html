@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Navbar with Toggle Profile Details</title>
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet"><meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="retailer.css">
+
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <!-- Logo on the absolute left -->
+        <a href="#" class="logo"><img id="Logo_1" src="Logo.jpeg"></a>
+
+        <!-- Location button beside the logo -->
+        <a href="#" class="location">Location</a>
+
+        <!-- Search bar in the middle of the navbar -->
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+        </div>
+
+        <!-- Orders button -->
+        <a href="#" class="orders">Orders</a>
+
+        <!-- Cart button -->
+        <a href="#" class="cart">Cart</a>
+
+        <!-- Profile button with toggle dropdown on click -->
+        <div class="profile" onclick="toggleProfileDropdown()">
+            Profile
+            <!-- Dropdown with login details -->
+            <div class="profile-dropdown" id="profileDropdown">
+                <p id="user_name" class="color_black"></p>
+                <p>Email: user@example.com</p>
+                <p>Account Status: Active</p>
+                <button id="logout" onclick="logout()" class="glyphicon glyphicon-log-out btn btn-danger">Logout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page content for spacing -->
+    <div style="margin-top: 70px; padding: 20px;">
+        <h1>Welcome to Our Website</h1>
+ 
+    </div>
+    <script src="retailer.js"></script>
+</body>
+</html>

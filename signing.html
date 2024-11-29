@@ -1,0 +1,51 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://accounts.google.com/gsi/client" async></script>
+    <title>Dukaan Express Signup</title>
+    <link rel="stylesheet" href="signing.css">
+</head>
+<body>
+  <img class="logo" src="Logo.jpeg">
+    <div class="signup-container">
+     
+        <h1>Welcome to DukaanExpress</h1>
+
+        <form id="signup-form">
+          <div class="container">
+         
+          <div>
+            <p for="items">Email</p>
+            <input type="email" id="email" placeholder="Enter Email" required>
+          </div>
+          <br>
+           <div>
+            <p for="items">Password</p>
+            <input type="password" id="password" placeholder="Create a password" required>
+          </div> 
+           <br>
+           <div>
+            <p for="items">GST (Goods & Service tax) Number</p>
+            <input id="gst" type="number" class="form-control" placeholder="Enter your GST no." required>
+          </div>
+          <span class="error" id="errorMsg">Please fill out all fields.</span><br>
+            <br>
+            <div><button type="button" id="signupButton" onclick="adduser()">Sign Up</button> </div>
+            
+            <br>
+        </form>
+        <p>OR</p>
+        <div class="google-signin-container">
+          <button id="googleButton">
+              <img src="google-icon.png" alt="Google Icon" class="google-icon">
+              Continue with Google
+          </button>
+      </div>
+        <footer>
+            <p1>By continuing, you agree to DukaanExpress's <a href="#">Terms of Service</a> and acknowledge you've read our <a href="#">Privacy Policy</a>.</p1>
+        </footer>
+      </div>
+    <script src="signing.js"></script>
+</body>
+</html>
